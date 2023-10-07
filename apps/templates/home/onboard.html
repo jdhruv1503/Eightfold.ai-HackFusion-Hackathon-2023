@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Notifications {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">My onboarding</h4>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-info">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> User - </b> Hello! It's my first day here</span>
+            </div>
+            <div class="alert alert-primary">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> Chatbot - </b> Greetings! Welcome to our company</span>
+            </div>
+            <div class="alert alert-info">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> User - </b> I have a question: what do I do on my first day, i want to ensure im doing as much as I can</span>
+            </div>
+            <div class="alert alert-primary">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> Chatbot - </b> I can help with that! First thing you should do is report to the HR manager assigned to you: Mrs. Maisel. Go report and get your welcome package!</span>
+            </div>
+            <div class="alert alert-info">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> User - </b> Nice! What next?</span>
+            </div>
+            <div class="alert alert-primary">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> Chatbot - </b> Okay, now you should try attending the Product Management Expo at 12:30. It's relevant to your job role: which is - Product Manager.</span>
+            </div>
+            <div class="alert alert-info hidef" style="display: none;">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> User - </b> what do i do after</span>
+            </div>
+            <div class="alert alert-primary hidef2" style="display: none;">
+              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              </button>
+              <span><b> Chatbot - </b> After that, you should ask your boss for the past quarter's product surveys.</span>
+            </div>
+            <div class="alert alert-primary">
+              <span><input type="text"></span>
+              <button type="button" onclick="add();" aria-hidden="true" >Submit
+              </button>
+              </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script>
+  function add() {
+    var popups = document.querySelector('.hidef');
+    popups.style.display = 'block';
+    setTimeout(function() {
+      var popups = document.querySelector('.hidef2');
+    popups.style.display = 'block';
+}, 400);
+    
+  }
+</script>
+{% endblock javascripts %}
